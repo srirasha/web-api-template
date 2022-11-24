@@ -1,2 +1,10 @@
 # web-api-template
-A web api project template with serilog and elastic sink
+
+An ASP.NET Core Web API solution template ready to use containing:
+
+- A Web API project on dotnet 7
+- Automapper
+- MediatR
+- FluentValidation with global validation pipeline
+- Serilog with Console and Elastic configuration
+- /metrics with OpenTelemetry and Prometheus
