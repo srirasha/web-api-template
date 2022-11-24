@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Reflection;
 
 namespace Application
@@ -9,6 +10,7 @@ namespace Application
         public static void AddApplication(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddMediatR(Assembly.GetExecutingAssembly());
+            serviceCollection.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
     }
 }
