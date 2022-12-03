@@ -1,12 +1,11 @@
-using AutoMapper;
 using Infrastructure;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OpenTelemetry.Metrics;
 using Serilog;
+using Web.JD.Assets.API.Middlewares;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +24,8 @@ builder.Services.AddOpenTelemetryMetrics(options =>
 });
 
 WebApplication app = builder.Build();
+
+app.UseMiddleware<ExceptionsHandlerMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
