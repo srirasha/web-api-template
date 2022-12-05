@@ -10,4 +10,10 @@
 		<ProjectReference Include="..\Application\Application.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Mapping\Profiles\" />
+	  <Folder Include="Persistence\Entities\" />
+	  <Folder Include="Persistence\Repositories\" />
+	</ItemGroup>
+
 </Project>
